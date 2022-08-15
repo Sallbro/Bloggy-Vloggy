@@ -1,0 +1,21 @@
+.int_hd {
+    display: grid;
+    justify-content: center;
+
+    h1 {
+        max-width: 250px;
+        min-width: 150px;
+        margin-bottom: 5px;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    span {
+        max-width: 250px;
+        min-width: 150px;
+        height: 1px;
+        background-color: black;
+
+    }
+}

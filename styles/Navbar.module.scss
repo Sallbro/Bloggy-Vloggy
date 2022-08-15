@@ -1,0 +1,120 @@
+.navbar {
+    background-color: black;
+    color: white;
+    display: flex;
+    position: sticky;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    z-index: 100;
+    font-size: 18px;
+    font-weight: 600px;
+
+    ul {
+        display: flex;
+        list-style: none;
+
+        li {
+            margin: 20px;
+            cursor: pointer;
+        }
+
+        li:hover {
+            color: aqua;
+            font-size: large;
+            transition: 0.5s;
+        }
+    }
+
+    ul.nav_1 {
+        padding: 0px;
+    }
+
+    ul.nav_2 {
+        font-size: 25px;
+        display: none;
+    }
+
+    .nav_logo1 {
+        display: none;
+    }
+
+    @media (min-width: 640px) {
+
+        & ul.nav_1 {
+            left: 0px;
+            position: absolute;
+        }
+
+        & ul.nav_2 {
+            right: 0px;
+            position: absolute;
+            display: flex;
+        }
+    }
+
+    @media (min-width: 900px) {
+        .nav_logo1 {
+            display: flex;
+        }
+    }
+
+}
+
+.navbar_2 {
+    width: 100%;
+    height: 50px;
+    right: 0px;
+    // position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    ul {
+        display: flex;
+        list-style: none;
+        right: 0px;
+        position: absolute;
+        margin-left: 5px;
+
+        button {
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+
+        button:hover {
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+    }
+
+    .nav_logo2 {
+        display: none;
+        margin-left: 5px;
+    }
+
+    @media (min-width: 640px) {
+        & {
+            display: none;
+        }
+    }
+
+    @media (max-width: 900px) {
+        .nav_logo2 {
+            display: flex;
+        }
+    }
+}
+
+
+@media (max-width:900px) {
+    .front {
+        display: flex;
+        // justify-content: center;
+    }
+
+}
