@@ -22,7 +22,7 @@ export default function Blogblock({ block_data }) {
                                 <div className={styles.description}>
                                     <h1>{data.title}</h1>
                                     <h2>{data.desc}</h2>
-                                    <p>{data.detail}</p>
+                                    <p>{data.detail.substring(0, 20)}</p>
 
                                     <p className={styles.read_more}>
                                         <Link href={`/blog/${data.id}`} passHref>

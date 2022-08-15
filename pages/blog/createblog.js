@@ -42,7 +42,8 @@ export default function Createblog() {
     const Add_blg = async (e) => {
         e.preventDefault();
 
-        if (blog_img_name == "") {
+        if (blog_img_name == "" || detail.length < 100 ) {
+            alert("please enter details aleast 100 worlds");
             return;
         }
         const metadata = {

@@ -50,26 +50,10 @@ const router=useRouter();
                     <div className={styles.separator}></div>
                     <p>
                         {Blg.detail}
-                        Magnesium is one of the six essential macro-minerals that is
-                        required by the body for energy production and synthesis of protein and enzymes.
-                        It contributes to the development of bones and most importantly it is responsible for
-                        synthesis of your DNA and RNA. A new report that has appeared in theBritish Journal of Cancer,
-                        gives you another reason to add more magnesium to your diet...
-                        Magnesium is one of the six essential macro-minerals that is
-                        required by the body for energy production and synthesis of protein and enzymes.
-                        It contributes to the development of bones and most importantly it is responsible for
-                        synthesis of your DNA and RNA. A new report that has appeared in theBritish Journal of Cancer,
-                        gives you another reason to add more magnesium to your diet...
                     </p>
                 </div>
-                <h5>12</h5>
-                <h6>JANUARY</h6>
-                {/* <ul>
-                    <li key="sa"><i className="fa fa-eye fa-2x"></i></li>
-                    <li><i className="fa fa-heart-o fa-2x"></i></li>
-                    <li><i className="fa fa-envelope-o fa-2x"></i></li>
-                    <li><i className="fa fa-share-alt fa-2x"></i></li>
-                </ul> */}
+                <h5>{Blg.Date}</h5>
+                {/* <h6>JANUARY</h6> */}
                 <div className={styles.fab} onClick={Addfollower}><RiUserFollowLine /></div>
             </div>
         </>
@@ -102,6 +86,7 @@ export async function getServerSideProps(context) {
         blog_img_name: prdt.data().blog_img_name || null,
         blog_img_url: prdt.data().blog_img_url,
         auther_id: prdt.data().auther_id || null,
+        Date:prdt.data().Date.toDate().toDateString() || null,
         name: usrdt.data().name || null,
         prf_img_url: usrdt.data().prf_img_url || null
     }
