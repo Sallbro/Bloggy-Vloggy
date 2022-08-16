@@ -76,7 +76,7 @@ export default function Createblog() {
             }).catch((e) => {
                 // console.log("create postlike error ", e);
             })
-
+router.push("/");
         }).catch((e) => {
             // console.log("create data error ", e);
         })

@@ -42,9 +42,9 @@ export default function Myblog() {
     const get_post_ref = async (ath_id) => {
         const user_id_ref = doc(db, "Users", String(ath_id));
         const usrdt = await (await getDoc(user_id_ref));
-        console.log("user data ", usrdt.data());
+        // console.log("user data ", usrdt.data());
         const { create_post } = usrdt.data();
-        console.log("create_post ", create_post);
+        // console.log("create_post ", create_post);
         get_array_post_data(ath_id);
     }
     const del_blg = async (data) => {
@@ -77,7 +77,7 @@ export default function Myblog() {
                 <>
                     <div className={styles.main_blog_card}>
                         {prf.map((data) => {
-                            console.log("blfdt ", data);
+                            // console.log("blfdt ", data);
                             return (
                                 <>
                                     <div className={styles.blog_card} key={data.id}>
@@ -86,16 +86,8 @@ export default function Myblog() {
 
                                             </div>
                                             <ul className={styles.details}>
-                                                <li className={styles.author}><a href="#">John Doe</a></li>
+                                                <li className={styles.author}><a>Creaed on:</a></li>
                                                 <li className={styles.date}>Aug. 24, 2015</li>
-                                                <li className={styles.tags}>
-                                                    <ul>
-                                                        <li><a href="#">Learn</a></li>
-                                                        <li><a href="#">Code</a></li>
-                                                        <li><a href="#">HTML</a></li>
-                                                        <li><a href="#">CSS</a></li>
-                                                    </ul>
-                                                </li>
                                             </ul>
                                         </div>
                                         <div className={styles.description}>
