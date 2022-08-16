@@ -42,7 +42,7 @@ export default function Createblog() {
     const Add_blg = async (e) => {
         e.preventDefault();
 
-        if (blog_img_name == "" || detail.length < 100 ) {
+        if (blog_img_name == "" || detail.length < 100) {
             alert("please enter details aleast 100 worlds");
             return;
         }
@@ -69,6 +69,7 @@ export default function Createblog() {
 
         }).then(async (res) => {
             // console.log("create res ", res);
+            alert("Blog created succ..");
             Addcreatepost(res);
             const data2 = await addDoc(postlikecollectionref, {
                 post_id: res.id,
@@ -76,7 +77,7 @@ export default function Createblog() {
             }).catch((e) => {
                 // console.log("create postlike error ", e);
             })
-router.push("/");
+            router.push("/");
         }).catch((e) => {
             // console.log("create data error ", e);
         })

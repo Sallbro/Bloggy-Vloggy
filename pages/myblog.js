@@ -73,7 +73,7 @@ export default function Myblog() {
 
     return (
         <>
-            {prf ? (
+            {prf.length > 0 ? (
                 <>
                     <div className={styles.main_blog_card}>
                         {prf.map((data) => {
