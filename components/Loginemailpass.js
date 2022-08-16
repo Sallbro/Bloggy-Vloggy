@@ -3,7 +3,7 @@ import { auth } from './Firebaseconfig'
 import { useState } from "react";
 import styles from "../styles/Login.module.scss";
 import Googlelogin from './Googlelogin';
-import { Router, useRouter } from 'next/router';
+import {  useRouter } from 'next/router';
 export default function Loginemailpass() {
     const router=useRouter();
     const [useremail, setUseremail] = useState({

@@ -45,7 +45,7 @@ export default function Myblog() {
         console.log("user data ", usrdt.data());
         const { create_post } = usrdt.data();
         console.log("create_post ", create_post);
-        get_array_post_data( ath_id);
+        get_array_post_data(ath_id);
     }
     const del_blg = async (data) => {
         const dt = await deleteDoc(doc(db, "Blogs", data.id)).then(async (res) => {
@@ -73,7 +73,7 @@ export default function Myblog() {
 
     return (
         <>
-            {!prf ? (
+            {prf ? (
                 <>
                     <div className={styles.main_blog_card}>
                         {prf.map((data) => {
